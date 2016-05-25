@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="thB-te-e4c">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quran" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="7zi-oQ-WP3">
+                                <rect key="frame" x="20" y="72" width="560" height="508"/>
+                                <color key="backgroundColor" red="0.93333333333333335" green="0.91764705882352937" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="surahCell" rowHeight="60" id="DwN-XF-eXV" customClass="SurahTableViewCell" customModule="Quran" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="560" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DwN-XF-eXV" id="kZy-vJ-Hws">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gm7-AS-aRx">
+                                                    <rect key="frame" x="8" y="19" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JGb-xh-azW">
+                                                    <rect key="frame" x="376" y="19" width="176" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="176" id="dmr-4k-3OX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gm7-AS-aRx" firstAttribute="top" secondItem="kZy-vJ-Hws" secondAttribute="topMargin" constant="11" id="4Ag-0V-7p8"/>
+                                                <constraint firstItem="gm7-AS-aRx" firstAttribute="leading" secondItem="kZy-vJ-Hws" secondAttribute="leadingMargin" id="AMB-e0-Qc1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gm7-AS-aRx" secondAttribute="bottom" constant="11" id="NlZ-7p-QIS"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="JGb-xh-azW" secondAttribute="bottom" constant="11" id="bfm-1h-Q2F"/>
+                                                <constraint firstItem="JGb-xh-azW" firstAttribute="trailing" secondItem="kZy-vJ-Hws" secondAttribute="trailingMargin" id="myl-hg-mYc"/>
+                                                <constraint firstItem="JGb-xh-azW" firstAttribute="top" secondItem="kZy-vJ-Hws" secondAttribute="topMargin" constant="11" id="wbF-pl-3Im"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.91764705879999997" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="surahName" destination="gm7-AS-aRx" id="uYx-ka-ks6"/>
+                                            <outlet property="surahNameArabic" destination="JGb-xh-azW" id="Agl-zq-tN4"/>
+                                            <segue destination="ZiQ-PD-AtK" kind="show" identifier="showAyahWordSegue" id="Cd6-Sc-seK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="KHb-bg-pog"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="syN-3y-Aos"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.91764705882352937" blue="0.87058823529411766" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7zi-oQ-WP3" secondAttribute="bottom" constant="20" symbolic="YES" id="YVg-sS-zZQ"/>
+                            <constraint firstItem="7zi-oQ-WP3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ftg-8s-Dnp"/>
+                            <constraint firstItem="7zi-oQ-WP3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="icC-Vh-E5a"/>
+                            <constraint firstItem="7zi-oQ-WP3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sMy-Ig-Nht"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="u0r-e5-CNH"/>
+                    <connections>
+                        <outlet property="tableView" destination="7zi-oQ-WP3" id="qII-Jf-PwM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="645" y="171"/>
+        </scene>
+        <!--Ayah Word View Controller-->
+        <scene sceneID="Yc0-r0-qy5">
+            <objects>
+                <viewController id="EUO-fw-Yxt" customClass="AyahWordViewController" customModule="Quran" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NzR-PC-003"/>
+                        <viewControllerLayoutGuide type="bottom" id="Iy5-ca-T4P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w7M-EY-1SZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="P2P-S4-Gf2">
+                                <rect key="frame" x="20" y="72" width="560" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ayahWordCell" id="2Ua-D4-tlh" customClass="AyahWordTableViewCell" customModule="Quran" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="560" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="topRight" semanticContentAttribute="forceRightToLeft" tableViewCell="2Ua-D4-tlh" id="q32-Co-xvY">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="159"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h3I-hC-wOf">
+                                                    <rect key="frame" x="8" y="0.0" width="544" height="151"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NSG-cl-Ebx">
+                                                        <size key="itemSize" width="130" height="70"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="Cqv-Yj-QK7" customClass="AyahWordCollectionViewCell" customModule="Quran" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="130" height="70"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="130" height="70"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtk-PV-mhM">
+                                                                        <rect key="frame" x="29" y="8" width="42" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6c-dY-KVG">
+                                                                        <rect key="frame" x="29" y="38" width="42" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstItem="jtk-PV-mhM" firstAttribute="leading" secondItem="Cqv-Yj-QK7" secondAttribute="leadingMargin" constant="21" id="7I5-gD-pg3"/>
+                                                                <constraint firstItem="p6c-dY-KVG" firstAttribute="top" secondItem="jtk-PV-mhM" secondAttribute="bottom" constant="9" id="8N4-gA-Ev3"/>
+                                                                <constraint firstItem="jtk-PV-mhM" firstAttribute="leading" secondItem="p6c-dY-KVG" secondAttribute="leading" id="Nhc-KZ-SDC"/>
+                                                                <constraint firstItem="jtk-PV-mhM" firstAttribute="top" secondItem="Cqv-Yj-QK7" secondAttribute="topMargin" id="qUf-EG-MpR"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="atabicLabel" destination="jtk-PV-mhM" id="Dr1-GM-1VQ"/>
+                                                                <outlet property="transLabel" destination="p6c-dY-KVG" id="PYH-eN-myl"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="h3I-hC-wOf" secondAttribute="trailing" id="E7R-qm-rte"/>
+                                                <constraint firstItem="h3I-hC-wOf" firstAttribute="leading" secondItem="q32-Co-xvY" secondAttribute="leadingMargin" id="afN-vN-obd"/>
+                                                <constraint firstItem="h3I-hC-wOf" firstAttribute="bottom" secondItem="q32-Co-xvY" secondAttribute="bottomMargin" id="fCe-cF-CxH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ayahWordCollection" destination="h3I-hC-wOf" id="E3I-2b-5hj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="EUO-fw-Yxt" id="xDE-Og-e2N"/>
+                                    <outlet property="delegate" destination="EUO-fw-Yxt" id="4Sj-dq-2gi"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P2P-S4-Gf2" firstAttribute="top" secondItem="w7M-EY-1SZ" secondAttribute="topMargin" constant="72" id="WTD-sq-NIq"/>
+                            <constraint firstItem="P2P-S4-Gf2" firstAttribute="leading" secondItem="w7M-EY-1SZ" secondAttribute="leading" constant="20" id="X7g-zu-ISf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="P2P-S4-Gf2" secondAttribute="bottom" constant="20" id="cRe-tN-ndF"/>
+                            <constraint firstAttribute="trailing" secondItem="P2P-S4-Gf2" secondAttribute="trailing" constant="20" id="rXh-iF-MDF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bxG-1P-PS5">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="PAS-lq-G95"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="hb8-mv-DnV">
+                            <connections>
+                                <segue destination="mxD-Y6-SOh" kind="show" identifier="test" id="gLz-Ot-6pS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="P2P-S4-Gf2" id="oT5-h6-r8n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nc7-DR-cRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2317" y="156"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="xgy-8Z-Alr">
+            <objects>
+                <viewController id="mxD-Y6-SOh" customClass="CollectionViewController" customModule="Quran" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9gR-lV-nT9"/>
+                        <viewControllerLayoutGuide type="bottom" id="gGR-nf-ZEr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v2z-81-bjo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Wks-Pa-DIW">
+                                <rect key="frame" x="20" y="20" width="560" height="560"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UcN-BL-Cnl">
+                                    <size key="itemSize" width="142" height="87"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionCell" id="S26-4S-Gva" customClass="AyahWordCollectionViewCell" customModule="Quran" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="142" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="142" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGI-7b-a0E">
+                                                    <rect key="frame" x="50" y="15" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uK6-z8-dK0">
+                                                    <rect key="frame" x="50" y="50" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="atabicLabel" destination="EGI-7b-a0E" id="80w-CH-we1"/>
+                                            <outlet property="transLabel" destination="uK6-z8-dK0" id="RZC-Dx-UMF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Wks-Pa-DIW" id="tRQ-55-ZKQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gNF-qF-mVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2995" y="128"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="E01-g9-Kta">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="thB-te-e4c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Ou-7c-rfP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="odN-EA-L5y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iim-kz-EGk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47" y="171"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YOb-Gf-Zhg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZiQ-PD-AtK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pxK-wI-g1Y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EUO-fw-Yxt" kind="relationship" relationship="rootViewController" id="FFZ-9K-JLc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wrl-Fu-V2F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="156"/>
+        </scene>
+    </scenes>
+</document>
